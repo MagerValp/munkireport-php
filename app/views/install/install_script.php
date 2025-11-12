@@ -135,9 +135,8 @@ fi
 
 echo "# Preparing ${MUNKIPATH}"
 /bin/mkdir -p "${MUNKIPATH}munkilib"
-/bin/mkdir -p "${MUNKIPATH}scripts/cache"
+/bin/mkdir -m 700 -p "${MUNKIPATH}scripts/cache"
 /bin/mkdir -p "${INSTALLROOT}/Library/MunkiReport/Logs"
-/bin/chmod 600 "${MUNKIPATH}scripts/cache/" # drw------- root wheel
 
 # Create preflight.d symlinks
 /bin/rm -rf "${MUNKIPATH}preflight.d" && /bin/ln -s "scripts" "${MUNKIPATH}preflight.d"
@@ -292,7 +291,7 @@ if [[ "\$3" == "/" ]]; then
 	fi
 
 	# Set permissions on cache directory
-	/bin/chmod 600 /usr/local/munkireport/scripts/cache/ # drw------- root wheel
+	/bin/chmod 700 /usr/local/munkireport/scripts/cache
 
 else
 	TARGET="\$3"
