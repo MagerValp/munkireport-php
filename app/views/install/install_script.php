@@ -143,7 +143,7 @@ echo "# Preparing ${MUNKIPATH}"
 /bin/rm -rf "${MUNKIPATH}postflight.d" && /bin/ln -s "scripts" "${MUNKIPATH}postflight.d"
 
 # Make symlink to macadmins python3 https://github.com/macadmins/python
-/bin/rm -rf "${MUNKIPATH}munkireport-python3"; /bin/ln -s "/Library/ManagedFrameworks/Python/Python3.framework/Versions/Current/bin/python3" "${MUNKIPATH}munkireport-python3"
+/bin/rm -rf "${MUNKIPATH}munkireport-python3"; /bin/ln -s "/Library/ManagedFrameworks/Python/Python3.framework/Versions/3.10/bin/python3" "${MUNKIPATH}munkireport-python3"
 
 # Add the MunkiReport folder to the machine's path
 /bin/mkdir -p "${INSTALLROOT}/private/etc/paths.d/"
@@ -284,7 +284,7 @@ if [[ "\$3" == "/" ]]; then
 		echo " "
 		echo "No Python 3.10 detected! MunkiReport requires the Mac Admins Python 3.10 pkg"
 		echo "Please download and install it from:"
-		echo "https://github.com/macadmins/python/releases/tag/v3.10.9.80716"
+		echo "https://github.com/macadmins/python/releases/tag/v3.10.11.80742"
 		echo " "
 		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		echo " "
