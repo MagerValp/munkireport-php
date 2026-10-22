@@ -1,4 +1,4 @@
-FROM php:8.4.27-apache
+FROM php:8.4-apache
 
 ENV APP_DIR /var/munkireport
 
